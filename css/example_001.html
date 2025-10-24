@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div {
+                color: red;
+            }
+
+            .content:first-child {
+                color: green;
+            }
+
+            .content.content {
+                color: cyan; /* applied */
+            }
+
+            .wrapper p {
+                color: blue;
+            }
+
+            .content {
+                color: orange;
+            }
+
+            .wrapper {
+                color: gray;
+            }
+
+            .wrapper * {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <p class="content">
+                Content
+            </p>
+        </div>
+    </body>
+</html>
+
+<!--
+Selectors weights:
+
+Inline style = 1000;
+ID = 100;
+Class, attribute, pseudo-class = 10;
+Tag, pseudo-element = 1;
+-->
