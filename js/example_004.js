@@ -1,7 +1,9 @@
 class MySet {
     constructor(items) {
         this.store = items.reduce((acc, i) => {
-            acc[i] = i;
+            if (!acc.hasOwnProperty(i)) {
+                acc[i] = i;
+            }
 
             return acc;
         }, {});
